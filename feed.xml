@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Andrew Watts&#39;s Blog</title>
+    <description>Andrew Watts&#39;s blog for his work and hobbies, especially learning to play music (guitar, bass guitar, and cello primarily), music theory, programming, and running.
+</description>
+    <link>https://awatts.us/</link>
+    <atom:link href="https://awatts.us/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 31 Dec 2015 14:30:11 -0500</pubDate>
+    <lastBuildDate>Thu, 31 Dec 2015 14:30:11 -0500</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Starting From Scratch With Octopress 3.0</title>
+        <description>&lt;p&gt;The first version of this post was written in February of 2015. It&amp;#39;s finally going
+to go up on December 31st. I&amp;#39;ve been busy and Octopress 3.x is still not entirely
+kink free (in fact, I had to run &lt;code&gt;bundle exec octopress new post &amp;quot;Starting From Scratch With Octopress 3.0&amp;quot;&lt;/code&gt;, because for some reason &lt;code&gt;octopress new post ...&lt;/code&gt; alone causes a &lt;code&gt;LoadError&lt;/code&gt; on
+&lt;code&gt;octopress-genesis-theme&lt;/code&gt;) and still doesn&amp;#39;t work with Jekyll 3.x.&lt;/p&gt;
+
+&lt;p&gt;Long ago I tried starting a blog on GitHub with Octopress 2.x, but I quickly got
+frustrated with it because it involved basically forking Brandon Mathis&amp;#39;s blog and
+tweaking it and hoping nothing upstream conflicted with any changes you made, which
+it always did. Or at least for me, but I could&amp;#39;ve been doing everything wrong. So
+I&amp;#39;m just blowing that version of the blog away and starting over now that Octopress
+is a set of Ruby gems instead.&lt;/p&gt;
+
+&lt;p&gt;Now that I&amp;#39;ve figured out how to get Octopress 3.x working I&amp;#39;m going to try to
+seriously get this blog going. Out of the gate I&amp;#39;m using the default &lt;a href=&quot;https://github.com/octopress/genesis-theme&quot;&gt;Genesis theme&lt;/a&gt;, because &lt;a href=&quot;https://github.com/octopress/ink&quot;&gt;Ink&lt;/a&gt;
+isn&amp;#39;t documented well enough yet for other themes to exist or for me
+to take a stab at it myself (at least given that I don&amp;#39;t have a lot of time to
+spend on it). I&amp;#39;m also planning to add Disqus comments in the not too distant future,
+once I&amp;#39;m happy with the things are working. I&amp;#39;ll also slowly remove all the default
+boilerplate Jekyll stuff and personalize it. But I want to get this officially
+started before the end of 2015.&lt;/p&gt;
+
+&lt;p&gt;Coming soon: a post about who I am and what this blog will be about.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 31 Dec 2015 13:53:20 -0500</pubDate>
+        <link>https://awatts.us/2015/12/31/starting-from-scratch-with-octopress-3-0.html</link>
+        <guid isPermaLink="true">https://awatts.us/2015/12/31/starting-from-scratch-with-octopress-3-0.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
