@@ -6,9 +6,39 @@
 </description>
     <link>https://awatts.us/</link>
     <atom:link href="https://awatts.us/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 31 Dec 2015 14:30:11 -0500</pubDate>
-    <lastBuildDate>Thu, 31 Dec 2015 14:30:11 -0500</lastBuildDate>
+    <pubDate>Fri, 01 Jan 2016 17:18:54 -0500</pubDate>
+    <lastBuildDate>Fri, 01 Jan 2016 17:18:54 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>My 20th Linuxversary</title>
+        <description>&lt;p&gt;I can&amp;#39;t remember the exact date that I started using Linux, but it&amp;#39;s been 20 years
+sometime in early January. With some Christmas &amp;#39;95 money I bought a book at MediaPlay
+that came with Slackware 2.3 (released 1995-05-10) on CD. The Wikipedia entry for &lt;a href=&quot;https://en.wikipedia.org/wiki/Slackware&quot;&gt;Slackware&lt;/a&gt; claims 3.0 was the first version
+to come on CD, but my bookshelf disagrees, and the book the CD came with was written
+by Patrick Volkerding himself.&lt;/p&gt;
+
+&lt;p&gt;At the time I had my first computer of my own, which had a Cyrix Cx486DX2-80, 8MB RAM,
+and a decent sized hard drive for the time; I&amp;#39;m thinking it was either 500MB or maybe
+even 1GB. It came with DOS 6.22 and Windows 3.11 For Workgroups. I didn&amp;#39;t have the
+Microsoft install media (and I wouldn&amp;#39;t be surprised if the store I bought it from
+didn&amp;#39;t have a valid license), so I feared formatting and used UMSDOS and Loadlin
+to install and boot Linux on top of DOS and the FAT filesystem.&lt;/p&gt;
+
+&lt;p&gt;With my next computer I moved on to SuSE, which I stuck with through the 6.x and 7.x
+versions. I took a couple year detour through BeOS, FreeBSD, and OpenBSD before
+landing on Debian around 2004 with Woody (3.0). Eventually I got sick of how bad
+Linux was on laptops (I&amp;#39;ve gathered it&amp;#39;s improved immensely) and bought a PowerBook
+G4 with MacOS X 10.3 (Unix on a laptop that works!) and have had a couple more Mac
+desktops and laptops over the years (typing this on a 2012 MacBook Pro 15&amp;quot;), but
+I&amp;#39;ve kept some sort of Debian box at work and/or home constantly.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 01 Jan 2016 15:37:14 -0500</pubDate>
+        <link>https://awatts.us/2016/01/01/my-20th-linuxversary.html</link>
+        <guid isPermaLink="true">https://awatts.us/2016/01/01/my-20th-linuxversary.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Starting From Scratch With Octopress 3.0</title>
