@@ -4,10 +4,52 @@
   <link rel="alternate" type="text/html" href="https://awatts.us/"/>
   <link rel="self" type="application/atom+xml" href="https://awatts.us/feed/"/>
   <id>https://awatts.us/</id>
-  <updated>2016-01-01T15:37:14-05:00</updated>
+  <updated>2016-01-05T21:06:54-05:00</updated>
   <generator uri="http://octopress.org/">Octopress</generator>
   
   <rights>Copyright © 2016, https://awatts.us</rights>
+
+  <entry>
+    <title type="html">Variations on a Theme</title>
+    
+    <link rel="alternate" type="text/html" href="https://awatts.us/2016/01/05/variations-on-a-theme.html"/>
+    
+    <id>/2016/01/05/variations-on-a-theme</id>
+    <published>2016-01-05T21:06:54-05:00</published>
+    <updated>2016-01-05T21:06:54-05:00</updated>
+    
+    <content type="html" xml:base="https://awatts.us/" >
+<![CDATA[
+
+<p>I want to look at some different ways of writing code in different languages that
+may be more or less readable and understandable.</p>
+
+<p>To this end I&#39;m going to take some code I wrote at work to parse a text based file
+format we created for storing region information from Self Paced Reading stimuli for an
+app that can&#39;t handle Linger style regioned sentences. It ended up getting a bit
+terse with all the list and dictionary comprehensions. Simultaneously idiomatic
+Python and yet almost Perl-esque in its line noisiness.</p>
+
+<figure class='code-highlight-figure'><div class='code-highlight'><pre class='code-highlight-pre'><div data-line='1' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="k">def</span> <span class="nf">parse_region_file</span><span class="p">(</span><span class="n">region_file</span><span class="p">):</span>
+</div></div><div data-line='2' class='code-highlight-row numbered'><div class='code-highlight-line'>    <span class="sd">&quot;&quot;&quot;</span>
+</div></div><div data-line='3' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="sd">    Read in a region file and return a list of dicts of regions.</span>
+</div></div><div data-line='4' class='code-highlight-row numbered'><div class='code-highlight-line'> </div></div><div data-line='5' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="sd">    Contents of region file should be a sequence of lines with</span>
+</div></div><div data-line='6' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="sd">    an item number, pipe and zero or more span specifications like</span>
+</div></div><div data-line='7' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="sd">    &#39;label:startindex,endindex&#39;, e.g.</span>
+</div></div><div data-line='8' class='code-highlight-row numbered'><div class='code-highlight-line'> </div></div><div data-line='9' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="sd">    1|subject:0,1;verb:1,2;object:2,6</span>
+</div></div><div data-line='10' class='code-highlight-row numbered'><div class='code-highlight-line'><span class="sd">    &quot;&quot;&quot;</span>
+</div></div><div data-line='11' class='code-highlight-row numbered'><div class='code-highlight-line'>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">region_file</span><span class="p">,</span> <span class="s">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">rfile</span><span class="p">:</span>
+</div></div><div data-line='12' class='code-highlight-row numbered'><div class='code-highlight-line'>        <span class="n">splitreg</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;|&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">rfile</span><span class="o">.</span><span class="n">readlines</span><span class="p">()]</span>
+</div></div><div data-line='13' class='code-highlight-row numbered'><div class='code-highlight-line'> </div></div><div data-line='14' class='code-highlight-row numbered'><div class='code-highlight-line'>        <span class="n">regdict</span> <span class="o">=</span> <span class="p">&#x7b;</span><span class="nb">int</span><span class="p">(</span><span class="n">reg</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span> <span class="n">reg</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;;&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">reg</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="s">&#39;&#39;</span> <span class="k">else</span> <span class="p">[</span><span class="s">&#39;NA:0,0&#39;</span><span class="p">,</span> <span class="p">]</span>
+</div></div><div data-line='15' class='code-highlight-row numbered'><div class='code-highlight-line'>                   <span class="k">for</span> <span class="n">reg</span> <span class="ow">in</span> <span class="n">splitreg</span><span class="p">&#x7d;</span>
+</div></div><div data-line='16' class='code-highlight-row numbered'><div class='code-highlight-line'> </div></div><div data-line='17' class='code-highlight-row numbered'><div class='code-highlight-line'>        <span class="k">return</span> <span class="p">&#x7b;</span><span class="n">k</span><span class="p">:</span> <span class="p">&#x7b;</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">)]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;:&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">v</span><span class="p">]&#x7d;</span>
+</div></div><div data-line='18' class='code-highlight-row numbered'><div class='code-highlight-line'>                <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">regdict</span><span class="o">.</span><span class="n">items</span><span class="p">()&#x7d;</span></div></div></pre></div></figure>
+
+
+
+]]>
+    </content>
+  </entry>
 
   <entry>
     <title type="html">My 20th Linuxversary</title>
