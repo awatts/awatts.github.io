@@ -1,9 +1,11 @@
 source 'https://rubygems.org'
-gem 'jekyll', '~> 3.0'
+gem 'jekyll', '~> 3.1', '>= 3.1'
 # gem 'jekyll', '~> 2.5', '>= 2.5.3'
 gem 'octopress' # , github: 'octopress/octopress'
 # gem 'octopress-solarized'
-#
+gem 'jekyll-seo-tag'
+gem 'jekyll-sitemap'
+
 group :jekyll_plugins do
   gem 'jekyll-paginate'
 #  gem 'octopress-codefence'
